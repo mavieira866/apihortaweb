@@ -1,0 +1,51 @@
+{
+  "name": "horta",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha --exit --timeout 100000 src/test/",
+    "coverage": "nyc --reporter=html --reporter=text mocha --exit src/test/ ",
+    "predeploy": "npm install",
+    "deploy": "nodemon server",
+    "prod": "nodemon --exec npm run deploy",
+    "start": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "^0.17.7",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "expo-server-sdk": "^3.1.0",
+    "express": "^4.16.4",
+    "googleapis": "36.0.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.5.0",
+    "md5": "^2.2.1",
+    "mongodb": "^3.1.12",
+    "mongoose": "5.4.5",
+    "mongoose-deep-populate": "^3.1.1",
+    "nodemailer": "^5.1.1",
+    "server": "^1.0.18",
+    "server.js": "^1.0.0",
+    "tempy": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/models",
+      "**/routes",
+      "**/test",
+      "**/services",
+      "**/bib"
+    ]
+  }
+}
