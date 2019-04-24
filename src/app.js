@@ -34,6 +34,7 @@ const indexRoute = require('./routes/index-route');
 const sensorRoute = require('./routes/sensor-route');
 const controladorRoute = require('./routes/controlador-route');
 const plantioRoute = require('./routes/plantio-route');
+const mobileRoute = require("./routes/mobile-route");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -44,5 +45,6 @@ app.use('/', indexRoute);
 //app.use('/sensor', sensorRoute);
 //app.use('/controlador', controladorRoute);
 //app.use('/plantio', plantioRoute);
+app.use("/mobile", mobileRoute);
 
 module.exports = app;
