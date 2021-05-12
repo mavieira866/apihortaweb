@@ -27,7 +27,7 @@
     "mongodb": "^3.1.12",
     "mongoose": "5.4.5",
     "mongoose-deep-populate": "^3.1.1",
-    "nodemailer": "^5.1.1",
+    "nodemailer": "^6.4.16",
     "server": "^1.0.18",
     "server.js": "^1.0.0",
     "tempy": "^0.2.1"
